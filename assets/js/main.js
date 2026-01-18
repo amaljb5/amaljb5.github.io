@@ -28,10 +28,23 @@ const linkAction = () =>{
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== HOME TYPED JS ===============*/
-
+const typedHome = new Typed('#home-typed', {
+        strings: ['Cybersecurity Enthusiast','Ethical Hacker (To-Be)','Photographer','Videographer','Editor'],
+        typeSpeed: 50,
+        backSpeed: 40,
+        backDelay: 2000,
+        loop: true,
+        cursorChar: '|',
+})
 
 /*=============== ADD SHADOW HEADER ===============*/
-
+const shadowHeader = () =>{
+   const header = document.getElementById('header')
+   // Add the .scroll-header class if the bottom scroll of the viewport is greater than 50
+   this.scrollY >= 50 ? header.classList.add('shadow-header') 
+                      : header.classList.remove('shadow-header')
+}
+window.addEventListener('scroll', shadowHeader)
 
 /*=============== CONTACT EMAIL JS ===============*/ 
 
